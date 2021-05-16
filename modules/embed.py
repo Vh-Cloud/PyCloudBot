@@ -39,8 +39,8 @@ class EmbedFunction:
                     **%create [nome] - Cria um canal**
                     **%delete [nome] - Deleta um canal**
                     **%dice [valor inicial] [valor final] - Gera um numero aleatorio entre `valor inicial` ate `valor final`**
+                    **%clear [quantidade] - Apaga mensagens no canal**
                     **%info - Traz informações sobre o PyCloud**
-                    **%help - Traz os comandos do PyCloud**
                 """
             embed = discord.message.Embed(color=0xFFFF00, title="PyCloud Commands", description=commands)
             await self.context.message.channel.send(embed=embed)

@@ -6,7 +6,7 @@ import random
 from modules import channels, embed
 
 
-token = dotenv_values(".env")['TOKEN']
+token = "token here"
 bot = commands.Bot(command_prefix='%', case_insensitive=True)
 bot.remove_command('help')
 client = discord.Client()
@@ -37,17 +37,17 @@ async def say(ctx, *, content: str):
 @bot.command()
 async def create(ctx, name):
     createChannel = channels.ChannelsFunction(ctx, name)
-    createChannel.create()
+    await createChannel.create()
 
 @bot.command()
 async def delete(ctx, name):
     delChannel = channels.ChannelsFunction(ctx, name)
-    delChannel.delete(discord)
+    await delChannel.delete(discord)
 
 @bot.command()
 async def info(ctx):
     embedDiscord = embed.EmbedFunction(ctx)
-    embedDiscord.embedCreate(discord, 'info')
+    await embedDiscord.embedCreate(discord, 'info')
 
 @bot.command()
 async def help(ctx):
@@ -83,6 +83,16 @@ async def unban(ctx, id: int):
 async def dice(ctx, init: int, end: int):
     value = int(random.randrange(init, end))
     await ctx.send(value)
+
+@bot.command()
+async def clear(ctx, amount = 6):
+    author = ctx.message.author    
+    
+    if author.guild_permissions.administrator:
+        await ctx.channel.purge(limit=amount)
+    
+    else:
+        await ctx.send(f'{author.mention} Você não tem permissão para apagar conversas no canal')
 
 
 #Run bot
