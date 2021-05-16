@@ -38,6 +38,7 @@ class EmbedFunction:
                     **%say [palavra] - O PyCloud digita essa palavra**
                     **%create [nome] - Cria um canal**
                     **%delete [nome] - Deleta um canal**
+                    **%dice [valor inicial] [valor final] - Gera um numero aleatorio entre `valor inicial` ate `valor final`**
                     **%info - Traz informações sobre o PyCloud**
                     **%help - Traz os comandos do PyCloud**
                 """
