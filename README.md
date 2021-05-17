@@ -2,7 +2,7 @@
 
 ## Descrição 📜
 
-PyCloud é um Bot basico feito em python para a demonstração de serviços de bots da vhcloud (bot em javascript: [Link](http://https://github.com/Vh-Cloud/JsCloudBot))
+PyCloud é um Bot basico feito em python para a demonstração de serviços de bots da vhcloud (bot em javascript: [Link](https://github.com/Vh-Cloud/JsCloudBot))
 
 ## Detalhes 
 
