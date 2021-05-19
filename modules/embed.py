@@ -38,9 +38,12 @@ class EmbedFunction:
                     **%say [palavra] - O PyCloud digita essa palavra**
                     **%create [nome] - Cria um canal**
                     **%delete [nome] - Deleta um canal**
+                    **%ban [menção] - Dá ban no usuario mencionado**
+                    **%unban [ID] - Retira o ban do usuario com o `ID`**
                     **%dice [valor inicial] [valor final] - Gera um numero aleatorio entre `valor inicial` ate `valor final`**
                     **%clear [quantidade] - Apaga mensagens no canal**
                     **%info - Traz informações sobre o PyCloud**
+                    **%invite - Mostra o link de convite do bot**
                 """
             embed = discord.message.Embed(color=0xFFFF00, title="PyCloud Commands", description=commands)
             await self.context.message.channel.send(embed=embed)
