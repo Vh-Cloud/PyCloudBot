@@ -6,7 +6,7 @@ from discord.ext import commands
 import random
 from modules import channels, embed, blacklist, anticaps
 
-token = "ODQyOTI2Nzg4NDQ3NDM2ODAx.YJ8avw.13X8k4Pk8Ua5YH7c8Y3NlZkTLN4"
+
 bot = commands.Bot(command_prefix='%', case_insensitive=True)
 bot.remove_command('help')
 client = discord.Client()
